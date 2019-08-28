@@ -53,3 +53,7 @@ blocks:
         - name: Test
           commands:
             - python tests.py
+
+promotions:
+  - name: Deploy to Heroku
+    pipeline_file: heroku.yml
