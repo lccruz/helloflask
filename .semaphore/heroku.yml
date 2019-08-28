@@ -12,7 +12,7 @@ blocks:
         - name: demoapp-heroku
       env_vars:
         - name: HEROKU_REMOTE
-          value: lcchelloflask
+          value: https://git.heroku.com/lcchelloflask.git
 
       jobs:
       - name: Push code
