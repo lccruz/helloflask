@@ -17,7 +17,7 @@ class HelloTests(unittest.TestCase):
         response = self.app.get('/')
         self.assertEqual(response.status_code, 200)
         response = response.get_json()
-        self.assertEqual(response.get('message'), 'Flask and you and we')
+        self.assertEqual(response.get('message'), 'Flask and you')
 
 
 if __name__ == "__main__":
