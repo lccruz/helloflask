@@ -1,5 +1,4 @@
 import unittest
-import json
 from app import app
 
 
@@ -18,6 +17,11 @@ class HelloTests(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         response = response.get_json()
         self.assertEqual(response.get('message'), 'Flask 2019')
+
+    def test_hello_message(self):
+        response = self.app.get('/hello')
+        response_str = response.data.decode('utf-8')
+        self.assertIn('<h3>hello</h3>', response_str)
 
 
 if __name__ == "__main__":
