@@ -16,7 +16,7 @@ class HelloTests(unittest.TestCase):
         response = self.app.get('/')
         self.assertEqual(response.status_code, 200)
         response = response.get_json()
-        self.assertEqual(response.get('message'), 'Flask 3000')
+        self.assertEqual(response.get('message'), 'Flask 4000')
 
     def test_hello_message(self):
         response = self.app.get('/hello')
